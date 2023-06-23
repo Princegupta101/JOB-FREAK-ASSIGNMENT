@@ -1,0 +1,78 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    display: flex;
+    width: 100vh;
+    width: 100vw;
+}
+#left-panel{
+    display: flex;
+    flex-direction: column;
+    font-size: 25px;
+    height: 100vh;
+    padding: 40px;
+    color: black;
+    width: 17%;
+    background-color:#a3c4d0 ;
+}
+#content{
+
+    font-size: 22px;
+    width: 80%;
+    padding: 10px;
+}
+#content > div{
+    display: none;
+}
+#content > div.show{
+    padding: 10px;
+    display: block;
+}
+
+#left-panel ul{
+    list-style-type:none;   
+}
+#left-panel li{
+    margin-bottom: 12px;
+}
+#left-panel li a{
+    text-decoration: none; 
+}
+.home-inner {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+}
+.home-inner h1{
+    color: rgb(20, 174, 51);
+    font-size: 70px;  
+}
+
+Span{
+    color: rgb(92, 39, 142);
+}
+.form-group{
+    margin-bottom: 20px;
+}
+label{
+    display: block;
+    font-weight: 600;
+}
+input[type="text"],input[type="email"],
+textarea{
+    width: 100%;
+    padding: 10px;
+    border-radius: 4px;
+}
+input[type="submit"]{
+    margin-left: 10px;
+    background-color:rgb(170, 76, 131);
+    border: none;
+    padding: 10px 20px;
+    border-radius: 4px;
+    cursor: pointer;
+}

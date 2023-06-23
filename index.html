@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assignment</title>
+    <!-- css flie -->
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <!-- left pannel -->
+    <div id="left-panel">
+        <ul>
+            <li><a href="#" onclick="showContent('home')">Home</a></li>
+            <li><a href="#"onclick="showContent('contact')">Contact</a></li>
+            <li><a href="#"onclick="showContent('information')">Information</a></li>
+            <li><a href="#"onclick="showContent('guide')">Guide</a></li>
+        </ul>
+    </div>
+
+    <!-- content -->
+    <div id="content">
+        <div id="home">
+            <h2>Home</h2><br>
+           <div class="home-inner">
+                <h1>WELCOME </h1><br>
+              <h3> Its only develop for Assignment And show skills </h3>
+           </div>
+        </div>
+
+        <!-- contact -->
+        <div id="contact">
+            <h2>Contact US</h2><br>
+            <p>
+                <form>
+                    <div class="from-group">
+                        <label for="name"> Name : </label>
+                        <input type="text" id="name" name="name" required>
+                    </div>
+                    <div class="from-group">
+                        <label for="email"> Email : </label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                    <div class="from-group">
+                        <label for="massage"> Massage: </label>
+                       <textarea name="massage" id="massage" cols="30" rows="10" required></textarea>
+                    </div>
+                    <div class="form-group">
+                        <input type="submit" value="Submit">
+                    </div>
+                </form>
+
+            </p>
+
+        </div>
+
+        <!--Information page  -->
+        <div id="information">
+            <h2>Information</h2><br>
+            <p> 
+                <br>Additional information
+                <br>
+                <h4>This web application develop for Assignment and show skills</h4>
+            </p>
+        </div>
+
+        <!-- Guide page -->
+        <div id="guide">
+            <h2>Guide</h2><br>
+            <p>
+                <br>
+                <h3>Use to this application click the left panel Elements</h3> <br><br>
+                1. Open to home page click <span>HOME </span><br>
+                2. Contact for developer click <span>Contact</span><br>
+                3.Get to Additional information click <span>Information</span><br>
+            </p>
+        </div>
+    </div>
+
+    <script>
+        function showContent(id){
+            var contentDivs=document.querySelectorAll('#content > div')
+            for(var i= 0; i< contentDivs.length;i++){
+                contentDivs[i].classList.remove('show');
+            }
+            var selectedDiv= document.getElementById(id);
+            selectedDiv.classList.add('show');
+        }
+    </script>
+
+</body>
+</html>
